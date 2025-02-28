@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyria Translation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0073e6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 1.5em;
+            cursor: pointer;
+            z-index: 9999;
+            transition: opacity 0.8s ease-out;
+        }
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu li {
+            margin: 10px 0;
+        }
+        .menu a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #0073e6;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        .highlight {
+            background: yellow;
+            padding: 5px;
+            font-size: 1.2em;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        a {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="splash-screen" onclick="hideSplashScreen()">
+        <h1>Valkyria Translation</h1>
+        <p>Click meee!!</p>
+    </div>
+
+    <div class="header">
+        <h1>Welcome to my blog!</h1>
+        <h2>Chào mừng đến với blog của tôi!</h2>
+        <p><small>Made by Kyle :)</small></p>
+        <p><small>Website được dựng lên bởi Kyle :)</small></p>
+    </div>
+
+    <div class="content">
+        <h2><span class="highlight">- Valkyria Translation -</span></h2>
+        <p>Valkyria Translation là một nhóm dịch thuật chỉ bao gồm duy nhất một thành viên - một cậu học sinh mới bước vào đời.</p>
+        <p>Vì chỉ có một thành viên, nên người đó sẽ phải đảm nhận tất cả các công việc như kiểm tra dịch thuật, căn thoại vào bong bóng, v.v.</p>
+        <p>Nhóm hoạt động chủ yếu trên:</p>
+        
+        <ul class="menu">
+            <li><a href="https://cuutruyen.net/mangas/2447" target="_blank" rel="noopener noreferrer">Cứu Truyện</a></li>
+            <li><a href="https://mangadex.org/group/d1b308db-ac3f-4a6b-b593-885b55bbc1f4/valkyria" target="_blank" rel="noopener noreferrer">MangaDex</a></li>
+        </ul>
+
+        <hr>
+
+        <h3>Dịch truyện theo yêu cầu (có phí)</h3>
+        <p>- Giá cả thương lượng, tùy thuộc vào độ khó và số lượng trang.</p>
+        <p>- Liên hệ qua email: <a href="mailto:aunguyendangkhoi@gmail.com">Click vào đây</a></p>
+        <p>- Liên hệ qua Facebook: <a href="https://www.facebook.com/KyleBuh0" target="_blank" rel="noopener noreferrer">Click vào đây</a></p>
+
+        <hr>
+
+        <p class="quote">"Đối với tôi khoảng khắc hạnh phúc nhất của cuộc đời đó chính là tôi được ở bên cậu"</p>
+
+        <img src="https://i.pinimg.com/originals/74/c9/e8/74c9e8ed174bab1117faa88a12132870.gif" alt="J97">
+
+        <strong><p>Website sẽ được cập nhật nhiều thêm trong tương lai!</p></strong>
+
+        <hr>
+        <p><a href="#" id="playAudio">*Nhạc nền*</a></p>
+        <audio id="myAudio" loop>
+            <source src="audio/Cắt kéo trên Lênin - Low G - Rap Nhà Làm (Lyric video).mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ thẻ audio.
+        </audio>
+        <small><p class="quote">Low G - Cắt Kéo Trên Lenin</p></small>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("myAudio");
+            let playAudio = document.getElementById("playAudio");
+
+            audio.volume = 0.2;
+
+            playAudio.addEventListener("click", function(event) {
+                event.preventDefault();
+                audio.play();
+            });
+        });
+
+        function hideSplashScreen() {
+            document.querySelector('.splash-screen').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
